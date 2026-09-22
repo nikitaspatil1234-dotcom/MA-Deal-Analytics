@@ -1,159 +1,167 @@
 # M&A Deal Analytics & Financial Performance Dashboard
 
-## Project Objective
+## 📌 Project Overview
 
-The objective of this project is to analyze technology-sector mergers and acquisitions (M&A) data to identify acquisition trends, deal values, major acquiring companies, largest transactions, and deal-size patterns.
+This project analyzes mergers and acquisitions (M&A) activity in the technology sector to identify trends in deal volume, disclosed deal value, deal size distribution, and acquisition behavior.
 
-The project combines Python, SQL, and Power BI to perform data cleaning, exploratory analysis, SQL-based business analysis, and interactive dashboard development.
+The project combines **Python, SQL, and Power BI** to transform raw M&A data into a structured analytical workflow and interactive dashboard.
 
----
+## 🎯 Objectives
 
-## Business Questions
+* Analyze M&A deal activity over time
+* Identify the companies involved in the largest disclosed acquisitions
+* Compare acquiring companies by deal count
+* Analyze acquired companies by deal count
+* Examine disclosed deal value trends by year
+* Categorize deals based on disclosed transaction value
+* Identify major industry-level acquisition activity
+* Build an interactive Power BI dashboard for business insights
 
-This project answers key business questions such as:
+## 🛠️ Tools & Technologies
 
-- How has M&A deal activity changed over the years?
-- Which companies made the most acquisitions?
-- Which companies were acquired most frequently?
-- What are the largest disclosed M&A transactions?
-- How much total value was involved in disclosed deals?
-- What is the average disclosed deal value?
-- How are deals distributed across different deal-size categories?
-- What proportion of transactions have disclosed versus undisclosed values?
+* **Python** – Data cleaning, transformation and exploratory analysis
+* **Pandas & NumPy** – Data manipulation and analysis
+* **Matplotlib** – Data visualization
+* **SQL Server** – Data storage, querying and aggregation
+* **Power BI** – Interactive dashboard and business intelligence
+* **GitHub** – Version control and project documentation
 
----
-
-## Dataset
-
-The project uses a Technology Mergers & Acquisitions dataset containing information about acquisitions, acquiring companies, acquired companies, announcement dates, acquisition years, and deal prices.
-
-The original dataset contains both disclosed and undisclosed transaction values.
-
----
-
-## Tools & Technologies
-
-- **Python**
-  - Pandas
-  - NumPy
-  - Matplotlib
-  - Jupyter Notebook
-
-- **SQL**
-  - Microsoft SQL Server
-  - SQL Server Management Studio (SSMS)
-
-- **Business Intelligence**
-  - Microsoft Power BI
-
-- **Version Control**
-  - GitHub
-
----
-
-## Data Cleaning & Preparation
-
-The dataset was cleaned and prepared before analysis.
-
-Key data preparation steps included:
-
-- Loading and inspecting the acquisition dataset
-- Cleaning acquisition year values
-- Cleaning and validating deal announcement dates
-- Cleaning the deal price column
-- Separating disclosed and undisclosed deal values
-- Creating a cleaned numerical price field (`price_clean`)
-- Validating the cleaned data using SQL
-- Preparing the data for Power BI analysis
-
----
-
-## SQL Analysis
-
-SQL Server was used to validate the dataset and perform business-focused analysis.
-
-Key SQL analyses include:
-
-1. Overall acquisition KPIs
-2. Deal count by year
-3. Total disclosed deal value by year
-4. Average disclosed deal value by year
-5. Top 10 acquiring companies
-6. Top 10 acquired companies
-7. Top 10 largest disclosed transactions
-8. Deal-size categories by year
-9. Disclosed versus undisclosed transactions
-
-### Validated KPIs
-
-| KPI | Result |
-|---|---:|
-| Total Acquisitions | 1,643 |
-| Disclosed Deals | 421 |
-| Undisclosed Deals | 1,222 |
-| Total Disclosed Deal Value | $463.03B |
-| Average Disclosed Deal Value | $1.10B |
-
----
-
-## Power BI Dashboard
-
-The Power BI dashboard was developed to provide an interactive view of M&A activity.
-
-### Dashboard Page 1 — Deal Analysis
-
-The dashboard includes:
-
-- Total Acquisitions
-- Disclosed Deals
-- Undisclosed Deals
-- Total Disclosed Deal Value
-- Average Disclosed Deal Value
-- Top 10 Largest Individual Deals
-- Deal Size Category by Year
-
-### Dashboard Page 2 — M&A Deal Trends & Company Analysis
-
-The dashboard includes:
-
-- Top 10 Acquiring Companies by Deal Count
-- Top 10 Acquired Companies by Deal Count
-- M&A Deal Count by Year
-- Total Disclosed Deal Value by Year
-- Average Disclosed Deal Value by Year
-
----
-
-## Key Findings
-
-- The dataset contains **1,643 acquisition transactions**.
-- **421 transactions** have disclosed deal values.
-- **1,222 transactions** have undisclosed deal values.
-- The total disclosed transaction value is approximately **$463.03 billion**.
-- The average disclosed deal value is approximately **$1.10 billion**.
-- Cisco Systems has the highest acquisition count in the dataset with **162 acquisitions**.
-- Google follows with **161 acquisitions**.
-- The largest disclosed transaction in the dataset is **Comcast's acquisition of Time Warner Cable**, valued at **$45 billion**.
-- Deal sizes were categorized into Small, Medium, Large, and Mega transactions for year-level analysis.
-
----
-
-## Project Structure
+## 📂 Project Structure
 
 ```text
-MA-Deal-Analytics/
+MA-Deal-Analysis/
 │
 ├── DATA/
 │   └── Acquisitions.csv
-│
-├── Images/
-│   └── Dashboard screenshots
 │
 ├── Notebook/
 │   └── MA_Deal_Analysis.ipynb
 │
 ├── PowerBI/
-│   └── M&A Deal Analytics Dashboard.pbix
+│   └── MA_Deal_Analytics_Dashboard.pbix
 │
-└── SQL/
-    └── MA_Deal_Analytics_Analysis.sql
+├── SQL/
+│   └── SQL analysis scripts
+│
+└── README.md
+```
+
+## 📊 Dashboard
+
+The Power BI dashboard contains three analytical pages.
+
+### 1. M&A Deal Analytics Dashboard
+
+Key visuals include:
+
+* Total M&A Deals
+* Top Disclosed M&A Deals
+* Average Disclosed Deal Value by Year
+* Deal Size Category Distribution
+* Top 10 Acquisitions by Disclosed Deal Value
+
+### 2. M&A Deal Trends
+
+This page analyzes:
+
+* Top 10 Acquiring Companies by Deal Count
+* Top 10 Acquired Companies by Deal Count
+* M&A Deal Count by Year
+* Total Disclosed Deal Value by Year
+* Acquired Company Disclosed Deal Value by Year
+
+### 3. M&A Deal Analysis
+
+This page provides:
+
+* 5 KPI metrics
+* Top 10 Largest Industry Deals
+* Deal Size Category by Year
+
+## 🔍 Key Analysis Areas
+
+### Deal Volume
+
+The analysis examines how M&A activity changed over time and identifies years with higher or lower deal activity.
+
+### Deal Value
+
+Disclosed transaction values are analyzed to understand the scale of M&A activity and identify the largest disclosed transactions.
+
+### Deal Size Distribution
+
+Deals are categorized into size groups based on disclosed transaction value to understand the distribution of small, medium and large transactions.
+
+### Company-Level Analysis
+
+The project analyzes both acquiring and acquired companies to identify organizations with significant M&A activity.
+
+### Industry Analysis
+
+Industry-level transaction data is used to identify major acquisition activity across technology-related sectors.
+
+## 📈 Analytical Workflow
+
+```text
+Raw M&A Dataset
+       ↓
+Data Cleaning & Transformation
+       ↓
+Python Exploratory Analysis
+       ↓
+SQL Analysis & Aggregation
+       ↓
+Power BI Data Modeling
+       ↓
+Interactive Dashboard
+       ↓
+Business Insights
+```
+
+## 💡 Business Value
+
+This project demonstrates how structured data analysis can be used to evaluate M&A activity and support business-oriented analysis.
+
+The dashboard can help users explore:
+
+* M&A activity trends
+* Transaction value patterns
+* Acquisition strategies
+* Major market participants
+* Deal size distribution
+* Industry-level acquisition activity
+
+## 👩‍💻 Skills Demonstrated
+
+* Data Cleaning
+* Exploratory Data Analysis
+* Python / Pandas / NumPy
+* SQL Querying
+* Data Aggregation
+* Business Intelligence
+* Power BI Dashboard Development
+* Data Visualization
+* Financial & M&A Analytics
+* GitHub Project Management
+
+## 📁 Dataset
+
+The project uses a technology-sector mergers and acquisitions dataset containing information about acquiring companies, acquired companies, announcement dates, industries and transaction values.
+
+Because some transaction values are not publicly disclosed, the analysis distinguishes between **disclosed and undisclosed deal values** where appropriate.
+
+## 🚀 Future Improvements
+
+Potential extensions to this project include:
+
+* Additional industry-level analysis
+* Acquisition trend analysis by geography
+* Interactive company-level drilldowns
+* Advanced Power BI measures using DAX
+* Predictive analysis of M&A activity
+* Automated data refresh pipeline
+
+## 📌 Conclusion
+
+This project demonstrates an end-to-end data analytics workflow, starting from raw M&A data and progressing through **Python analysis, SQL querying and Power BI visualization** to produce an interactive business intelligence dashboard.
+
